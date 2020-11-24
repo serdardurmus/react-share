@@ -1,9 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
-import Signup from './pages/Signup';
+  
+import Signup from "./pages/Signup";
+import Navbar from "./components/Navbar";
+
 function App() {
   return (
-    <Signup />
+    <div className="App">
+      <Navbar />
+      <Signup />
+      {/* 
+  
+  //Route
+  //Signin
+  //Signup
+  //forgotpassword
+  //....
+  */}
+    </div>
   );
 }
 

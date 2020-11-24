@@ -2,6 +2,8 @@ import React from "react";
 import { Button, TextField, Grid, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { useFormik } from "formik";
+import firebase from '../firebase/firebase.utils';
+// console.log("firebase", firebase);
 
 const stylesFunc = makeStyles({
   wrapper: {
@@ -51,6 +53,7 @@ function Signup() {
               name="password"
               label="Password"
               variant="outlined"
+              type="password"
               fullWidth
               value={formik.values.password}
               onChange={formik.handleChange}
