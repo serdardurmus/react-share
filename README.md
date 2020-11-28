@@ -87,3 +87,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - formik
 - yarn add yup
 - axios
+- yarn add prop-types
