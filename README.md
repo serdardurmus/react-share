@@ -2,6 +2,27 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### .env file
+    REACT_APP_API_KEY= 
+    REACT_APP_AUTH_DOMAIN= 
+    REACT_APP_DATABASE_URL= 
+    REACT_APP_PROJECT_ID= 
+    REACT_APP_STORAGE_BUCKET= 
+    REACT_APP_MESSAGING_SENDER_ID= 
+    REACT_APP_ID=
+    REACT_APP_API_BASE_URL=
+    REACT_APP_API_TOKEN=
+
+### import 
+- firebase
+- @material-ui/core
+- @material-ui/icons
+- formik
+- yarn add yup
+- axios
+- yarn add prop-types
+- yarn add date-fns
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -69,23 +90,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-### .env file
-    REACT_APP_API_KEY= 
-    REACT_APP_AUTH_DOMAIN= 
-    REACT_APP_DATABASE_URL= 
-    REACT_APP_PROJECT_ID= 
-    REACT_APP_STORAGE_BUCKET= 
-    REACT_APP_MESSAGING_SENDER_ID= 
-    REACT_APP_ID=
-    REACT_APP_API_BASE_URL=
-    REACT_APP_API_TOKEN=
-
-### import 
-- firebase
-- @material-ui/core
-- @material-ui/icons
-- formik
-- yarn add yup
-- axios
-- yarn add prop-types
-- yarn add date-fns
