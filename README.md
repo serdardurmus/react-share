@@ -83,4 +83,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - @material-ui/core
 - @material-ui/icons
 - formik
-- 
+- yarn add yup
