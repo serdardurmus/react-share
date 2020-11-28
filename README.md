@@ -88,3 +88,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - yarn add yup
 - axios
 - yarn add prop-types
+- yarn add date-fns
