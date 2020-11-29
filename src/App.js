@@ -4,7 +4,7 @@
 // import Signup from "./pages/Signup";
 // import Navbar from "./components/Navbar";
 
-import AppRouter from "./router/Router";
+import AppRouter from "./Router/Router";
 import AuthContextProvider from "./context/AuthContext";
 function App() {
   return (

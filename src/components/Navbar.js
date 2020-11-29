@@ -1,10 +1,11 @@
 import React, { useContext, useCallback, useMemo } from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import { useHistory } from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
+import HomeIcon from "@material-ui/icons/Home";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
@@ -26,6 +27,8 @@ const useStyles = makeStyles((theme) => ({
 export default function Navbar() {
   const { currentUser } = useContext(FirebaseAuthContext);
   const classes = useStyles();
+  const history = useHistory();
+
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -33,13 +36,9 @@ export default function Navbar() {
     setAnchorEl(event.currentTarget);
   };
 
-  const bigData = useMemo(
-    () => ({
-      a: "a",
-      b: "b",
-    }),
-    []
-  );
+  const handleHomeClick = useCallback(() => {
+    history.push(`/`);
+  }, []);
 
   const handleClose = useCallback(() => {
     setAnchorEl(null);
@@ -58,13 +57,14 @@ export default function Navbar() {
             className={classes.menuButton}
             color="inherit"
             aria-label="menu"
+            onClick={handleHomeClick}
           >
-            <MenuIcon />
+            <HomeIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
             React Share
           </Typography>
-          {currentUser && (
+          {currentUser ? (
             <div>
               <IconButton
                 aria-label="account of current user"
@@ -96,10 +96,24 @@ export default function Navbar() {
                 <MenuItem onClick={handleSignOut}>Sign Out</MenuItem>
               </Menu>
             </div>
+          ) : (
+            <>
+              <MenuItem
+                onClick={() => {
+                  window.location.href = "/login";
+                }}
+              >
+                Sign in
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  window.location.href = "/register";
+                }}
+              >
+                Sign up
+              </MenuItem>
+            </>
           )}
-          {/* 
-          //TODO: login & Register Links
-          */}
         </Toolbar>
       </AppBar>
     </div>
